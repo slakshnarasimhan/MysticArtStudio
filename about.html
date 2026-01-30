@@ -30,23 +30,69 @@
       name="twitter:image"
       content="https://mysticartstudio.com/assets/images/logo.png"
     />
+    <meta name="author" content="Yamuna Padmanaban" />
     <title>About the Artist — MysticArtStudio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "@id": "https://mysticartstudio.com/about.html#webpage",
-        "name": "About the Artist — MysticArtStudio",
-        "url": "https://mysticartstudio.com/about.html",
-        "description": "Meet the artist behind MysticArtStudio — a soulful creative studio designing visual narratives.",
-        "isPartOf": {
-          "@id": "https://mysticartstudio.com/#website"
-        },
-        "about": {
-          "@id": "https://mysticartstudio.com/#artist"
-        }
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://mysticartstudio.com/#organization",
+            "name": "MysticArtStudio",
+            "url": "https://mysticartstudio.com/",
+            "logo": "https://mysticartstudio.com/assets/images/logo.png",
+            "email": "yamunaa@gmail.com",
+            "sameAs": [
+              "https://www.facebook.com/media/set/?vanity=Yamunaa.Laksh&set=a.10210794901570833",
+              "https://www.instagram.com/mystic.art_yams/",
+              "https://www.linkedin.com/in/yamuna-padmanaban/"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Bengaluru",
+              "addressCountry": "IN"
+            },
+            "makesOffer": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Brand creation through Art"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Commissioned artwork"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Art merchandise"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "AboutPage",
+            "@id": "https://mysticartstudio.com/about.html#aboutpage",
+            "name": "About the Artist — MysticArtStudio",
+            "url": "https://mysticartstudio.com/about.html",
+            "description": "Meet the artist behind MysticArtStudio — a soulful creative studio designing visual narratives.",
+            "isPartOf": {
+              "@id": "https://mysticartstudio.com/#website"
+            },
+            "mainEntity": {
+              "@id": "https://mysticartstudio.com/#organization"
+            }
+          }
+        ]
       }
     </script>
   </head>
