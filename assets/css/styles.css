@@ -69,6 +69,29 @@ h5 {
   position: relative;
 }
 
+.animate-slide {
+  animation: slideShow 14s infinite;
+}
+
+@keyframes slideShow {
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  25%,
+  45% {
+    transform: translateY(-100%);
+  }
+  50%,
+  70% {
+    transform: translateY(-200%);
+  }
+  75%,
+  100% {
+    transform: translateY(-300%);
+  }
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
