@@ -39,55 +39,117 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+        "@graph": [
           {
-            "@type": "Question",
-            "name": "How can I verify the authenticity of an original painting from Mystic Art Studio?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Every original piece from Mystic Art Studio includes a hand-signed Certificate of Authenticity (COA)."
+            "@type": "Organization",
+            "@id": "https://MysticArtStudio.com/#organization",
+            "name": "MysticArtStudio",
+            "url": "https://MysticArtStudio.com/",
+            "logo": "https://MysticArtStudio.com/assets/images/logo.png",
+            "email": "yamunaa@gmail.com",
+            "sameAs": [
+              "https://www.facebook.com/media/set/?vanity=Yamunaa.Laksh&set=a.10210794901570833",
+              "https://www.instagram.com/mystic.art_yams/",
+              "https://www.linkedin.com/in/yamuna-padmanaban/"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Bengaluru",
+              "addressCountry": "IN"
             }
           },
           {
-            "@type": "Question",
-            "name": "What should I look for when buying art online?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Look for clear artist bios, high-resolution artwork previews, and secure, encrypted payment options."
+            "@type": "Person",
+            "@id": "https://MysticArtStudio.com/#artist",
+            "name": "Yamuna Padmanaban",
+            "worksFor": {
+              "@id": "https://MysticArtStudio.com/#organization"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/yamuna-padmanaban/",
+              "https://www.instagram.com/mystic.art_yams/"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://MysticArtStudio.com/#website",
+            "name": "MysticArtStudio",
+            "url": "https://MysticArtStudio.com/",
+            "publisher": {
+              "@id": "https://MysticArtStudio.com/#organization"
             }
           },
           {
-            "@type": "Question",
-            "name": "How do I commission a custom painting?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Start with a consultation to share your vision and space details, then approve a concept sketch before the final piece is created."
+            "@type": "WebPage",
+            "@id": "https://MysticArtStudio.com/faq.html#webpage",
+            "name": "Frequently Asked Questions — Mystic Art Studio",
+            "url": "https://MysticArtStudio.com/faq.html",
+            "description": "Answers to the most common questions about Mystic Art Studio, artwork, custom art, brand art services, merchandise, orders, pricing, and consultations.",
+            "datePublished": "2026-01-30",
+            "dateModified": "2026-01-30",
+            "author": {
+              "@id": "https://MysticArtStudio.com/#artist"
+            },
+            "publisher": {
+              "@id": "https://MysticArtStudio.com/#organization"
+            },
+            "isPartOf": {
+              "@id": "https://MysticArtStudio.com/#website"
             }
           },
           {
-            "@type": "Question",
-            "name": "How is the price of a commissioned painting determined?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Pricing is based on size, subject complexity, and materials, with a clear quote provided after the initial consultation."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do I preserve and clean an original painting?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Keep artwork away from direct sunlight and humidity, and dust gently with a dry, soft-bristled brush."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Why invest in original art instead of mass-produced prints?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Original art carries the artist’s hand, texture, and energy, and often holds long-term value beyond décor."
-            }
+            "@type": "FAQPage",
+            "@id": "https://MysticArtStudio.com/faq.html#faqpage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How can I verify the authenticity of an original painting from Mystic Art Studio?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Every original piece from Mystic Art Studio includes a hand-signed Certificate of Authenticity (COA)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What should I look for when buying art online?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Look for clear artist bios, high-resolution artwork previews, and secure, encrypted payment options."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I commission a custom painting?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Start with a consultation to share your vision and space details, then approve a concept sketch before the final piece is created."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is the price of a commissioned painting determined?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Pricing is based on size, subject complexity, and materials, with a clear quote provided after the initial consultation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I preserve and clean an original painting?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Keep artwork away from direct sunlight and humidity, and dust gently with a dry, soft-bristled brush."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why invest in original art instead of mass-produced prints?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Original art carries the artist’s hand, texture, and energy, and often holds long-term value beyond décor."
+                }
+              }
+            ]
           }
         ]
       }
