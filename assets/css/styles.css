@@ -218,3 +218,9 @@ h5 {
     column-count: 1;
   }
 }
+
+@media (max-width: 640px) {
+  .slide-caption {
+    font-size: 0.8rem;
+  }
+}
