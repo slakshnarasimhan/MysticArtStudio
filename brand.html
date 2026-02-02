@@ -44,41 +44,32 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Organization",
-            "@id": "https://artbrush.co/#organization",
-            "name": "Artbrush",
-            "url": "https://artbrush.co",
-            "logo": "https://artbrush.co/images/logo.png",
-            "founder": {
-              "@id": "https://artbrush.co/#person"
-            }
-          },
-          {
-            "@type": "Person",
-            "@id": "https://artbrush.co/#person",
-            "name": "Yamuna Padmanaban",
-            "jobTitle": ["Artist", "Art Therapist", "Brand Designer"],
-            "affiliation": {
-              "@id": "https://artbrush.co/#organization"
-            },
-            "knowsAbout": ["Art Therapy", "Illustration", "Branding", "Painting"]
-          },
-          {
-            "@type": "Service",
-            "@id": "https://artbrush.co/brand.html#service",
-            "name": "Brand Creation Through Art",
-            "serviceType": "Brand Creation Through Art",
-            "provider": {
-              "@id": "https://artbrush.co/#organization"
-            },
-            "url": "https://artbrush.co/brand.html",
-            "description": "Brand strategy and storytelling translated into visual identity and art-led experiences.",
-            "datePublished": "2026-01-30",
-            "dateModified": "2026-01-30"
-          }
-        ]
+        "@type": "Service",
+        "name": "Creating Brands Through Art — MysticArtStudio",
+        "serviceType": "Brand Creation Through Art",
+        "description": "Creating brands through art with a soulful process that blends emotion, simplicity, and storytelling.",
+        "url": "https://artbrush.co/brand.html",
+        "mainEntityOfPage": "https://artbrush.co/brand.html",
+        "datePublished": "2026-01-30",
+        "dateModified": "2026-01-30",
+        "author": {
+          "@type": "Person",
+          "name": "Yamuna Padmanaban",
+          "jobTitle": ["Artist", "Art Therapist", "Brand Designer"],
+          "knowsAbout": ["Art Therapy", "Illustration", "Branding", "Painting"]
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Artbrush",
+          "url": "https://artbrush.co",
+          "logo": "https://artbrush.co/assets/images/logo.png"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Artbrush",
+          "url": "https://artbrush.co",
+          "logo": "https://artbrush.co/assets/images/logo.png"
+        }
       }
     </script>
   </head>

@@ -41,40 +41,31 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Organization",
-            "@id": "https://artbrush.co/#organization",
-            "name": "Artbrush",
-            "url": "https://artbrush.co",
-            "logo": "https://artbrush.co/images/logo.png",
-            "founder": {
-              "@id": "https://artbrush.co/#person"
-            }
-          },
-          {
-            "@type": "Person",
-            "@id": "https://artbrush.co/#person",
-            "name": "Yamuna Padmanaban",
-            "jobTitle": ["Artist", "Art Therapist", "Brand Designer"],
-            "affiliation": {
-              "@id": "https://artbrush.co/#organization"
-            },
-            "knowsAbout": ["Art Therapy", "Illustration", "Branding", "Painting"]
-          },
-          {
-            "@type": "AboutPage",
-            "@id": "https://artbrush.co/about.html#aboutpage",
-            "name": "About the Artist — Artbrush",
-            "url": "https://artbrush.co/about.html",
-            "description": "Meet the artist behind Artbrush — a soulful creative studio designing visual narratives.",
-            "datePublished": "2026-01-30",
-            "dateModified": "2026-01-30",
-            "mainEntity": {
-              "@id": "https://artbrush.co/#person"
-            }
-          }
-        ]
+        "@type": "ProfilePage",
+        "name": "About the Artist — MysticArtStudio",
+        "description": "Meet the artist behind MysticArtStudio — a soulful creative studio designing visual narratives.",
+        "url": "https://artbrush.co/about.html",
+        "mainEntityOfPage": "https://artbrush.co/about.html",
+        "datePublished": "2026-01-30",
+        "dateModified": "2026-01-30",
+        "author": {
+          "@type": "Person",
+          "name": "Yamuna Padmanaban",
+          "jobTitle": ["Artist", "Art Therapist", "Brand Designer"],
+          "knowsAbout": ["Art Therapy", "Illustration", "Branding", "Painting"]
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Artbrush",
+          "url": "https://artbrush.co",
+          "logo": "https://artbrush.co/assets/images/logo.png"
+        },
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Yamuna Padmanaban",
+          "jobTitle": ["Artist", "Art Therapist", "Brand Designer"],
+          "knowsAbout": ["Art Therapy", "Illustration", "Branding", "Painting"]
+        }
       }
     </script>
   </head>

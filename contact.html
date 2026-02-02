@@ -39,42 +39,30 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Organization",
-            "@id": "https://artbrush.co/#organization",
-            "name": "Artbrush",
-            "url": "https://artbrush.co",
-            "logo": "https://artbrush.co/images/logo.png",
-            "founder": {
-              "@id": "https://artbrush.co/#person"
-            }
-          },
-          {
-            "@type": "Person",
-            "@id": "https://artbrush.co/#person",
-            "name": "Yamuna Padmanaban",
-            "jobTitle": ["Artist", "Art Therapist", "Brand Designer"],
-            "affiliation": {
-              "@id": "https://artbrush.co/#organization"
-            },
-            "knowsAbout": ["Art Therapy", "Illustration", "Branding", "Painting"]
-          },
-          {
-            "@type": "ContactPage",
-            "@id": "https://artbrush.co/contact.html#contactpage",
-            "name": "Contact — Artbrush",
-            "url": "https://artbrush.co/contact.html",
-            "description": "Contact Artbrush for brand consultation, artwork inquiries, collaborations, and art merchandise support.",
-            "datePublished": "2026-01-30",
-            "dateModified": "2026-01-30",
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "email": "yamunaa@gmail.com",
-              "contactType": "customer support"
-            }
-          }
-        ]
+        "@type": "ContactPage",
+        "name": "Contact — Mystic Art Studio | Connect with the Artist",
+        "description": "Contact Mystic Art Studio for brand consultation, artwork inquiries, collaborations, and art merchandise support.",
+        "url": "https://artbrush.co/contact.html",
+        "mainEntityOfPage": "https://artbrush.co/contact.html",
+        "datePublished": "2026-01-30",
+        "dateModified": "2026-01-30",
+        "author": {
+          "@type": "Person",
+          "name": "Yamuna Padmanaban",
+          "jobTitle": ["Artist", "Art Therapist", "Brand Designer"],
+          "knowsAbout": ["Art Therapy", "Illustration", "Branding", "Painting"]
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Artbrush",
+          "url": "https://artbrush.co",
+          "logo": "https://artbrush.co/assets/images/logo.png"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "yamunaa@gmail.com",
+          "contactType": "customer support"
+        }
       }
     </script>
   </head>

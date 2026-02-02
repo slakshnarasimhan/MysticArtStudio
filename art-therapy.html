@@ -41,41 +41,32 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Organization",
-            "@id": "https://artbrush.co/#organization",
-            "name": "Artbrush",
-            "url": "https://artbrush.co",
-            "logo": "https://artbrush.co/images/logo.png",
-            "founder": {
-              "@id": "https://artbrush.co/#person"
-            }
-          },
-          {
-            "@type": "Person",
-            "@id": "https://artbrush.co/#person",
-            "name": "Yamuna Padmanaban",
-            "jobTitle": ["Artist", "Art Therapist", "Brand Designer"],
-            "affiliation": {
-              "@id": "https://artbrush.co/#organization"
-            },
-            "knowsAbout": ["Art Therapy", "Illustration", "Branding", "Painting"]
-          },
-          {
-            "@type": "Service",
-            "@id": "https://artbrush.co/art-therapy.html#service",
-            "name": "Art Therapy",
-            "serviceType": "Art Therapy",
-            "provider": {
-              "@id": "https://artbrush.co/#organization"
-            },
-            "url": "https://artbrush.co/art-therapy.html",
-            "description": "Art therapy offerings supporting healing, reflection, and emotional expression.",
-            "datePublished": "2026-01-30",
-            "dateModified": "2026-01-30"
-          }
-        ]
+        "@type": "Service",
+        "name": "Art Therapy — Mystic Art Studio",
+        "serviceType": "Art Therapy",
+        "description": "Explore Mystic Art Studio art therapy offerings and learn how creative practice supports healing and self-discovery.",
+        "url": "https://artbrush.co/art-therapy.html",
+        "mainEntityOfPage": "https://artbrush.co/art-therapy.html",
+        "datePublished": "2026-01-30",
+        "dateModified": "2026-01-30",
+        "author": {
+          "@type": "Person",
+          "name": "Yamuna Padmanaban",
+          "jobTitle": ["Artist", "Art Therapist", "Brand Designer"],
+          "knowsAbout": ["Art Therapy", "Illustration", "Branding", "Painting"]
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Artbrush",
+          "url": "https://artbrush.co",
+          "logo": "https://artbrush.co/assets/images/logo.png"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Artbrush",
+          "url": "https://artbrush.co",
+          "logo": "https://artbrush.co/assets/images/logo.png"
+        }
       }
     </script>
   </head>

@@ -44,117 +44,90 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@graph": [
+        "@type": "OfferCatalog",
+        "name": "Gift Art — MysticArtStudio",
+        "description": "Affordable art collections curated by price, size, and theme.",
+        "url": "https://artbrush.co/affordable.html",
+        "mainEntityOfPage": "https://artbrush.co/affordable.html",
+        "datePublished": "2026-01-30",
+        "dateModified": "2026-01-30",
+        "author": {
+          "@type": "Person",
+          "name": "Yamuna Padmanaban",
+          "jobTitle": ["Artist", "Art Therapist", "Brand Designer"],
+          "knowsAbout": ["Art Therapy", "Illustration", "Branding", "Painting"]
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Artbrush",
+          "url": "https://artbrush.co",
+          "logo": "https://artbrush.co/assets/images/logo.png"
+        },
+        "itemListElement": [
           {
-            "@type": "Organization",
-            "@id": "https://artbrush.co/#organization",
-            "name": "Artbrush",
-            "url": "https://artbrush.co",
-            "logo": "https://artbrush.co/images/logo.png",
-            "founder": {
-              "@id": "https://artbrush.co/#person"
-            }
-          },
-          {
-            "@type": "Person",
-            "@id": "https://artbrush.co/#person",
-            "name": "Yamuna Padmanaban",
-            "jobTitle": ["Artist", "Art Therapist", "Brand Designer"],
-            "affiliation": {
-              "@id": "https://artbrush.co/#organization"
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Golden Pathways",
+              "image": "https://artbrush.co/assets/images/affordable-art/IMG_20260102_162358.jpg",
+              "description": "Warm light washes over layered strokes, evoking sunrise walks and quiet optimism. A grounding piece for calm interiors."
             },
-            "knowsAbout": ["Art Therapy", "Illustration", "Branding", "Painting"]
+            "priceCurrency": "INR",
+            "price": "2000",
+            "availability": "https://schema.org/InStock",
+            "url": "https://artbrush.co/affordable.html#art-01"
           },
           {
-            "@type": "OfferCatalog",
-            "@id": "https://artbrush.co/affordable.html#catalog",
-            "name": "Gift Art Collection",
-            "url": "https://artbrush.co/affordable.html",
-            "description": "Affordable art collections curated by price, size, and theme.",
-            "datePublished": "2026-01-30",
-            "dateModified": "2026-01-30",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Product",
-                  "name": "Golden Pathways",
-                  "image": "https://artbrush.co/assets/images/affordable-art/IMG_20260102_162358.jpg",
-                  "description": "Warm light washes over layered strokes, evoking sunrise walks and quiet optimism. A grounding piece for calm interiors.",
-                  "brand": {
-                    "@id": "https://artbrush.co/#organization"
-                  }
-                },
-                "priceCurrency": "INR",
-                "price": "2000",
-                "availability": "https://schema.org/InStock",
-                "url": "https://artbrush.co/affordable.html#art-01"
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Product",
-                  "name": "Soft River Memory",
-                  "image": "https://artbrush.co/assets/images/affordable-art/IMG_20260102_162433.jpg",
-                  "description": "Fluid brushwork and gentle contrasts create a meditative rhythm—like water moving through a quiet landscape.",
-                  "brand": {
-                    "@id": "https://artbrush.co/#organization"
-                  }
-                },
-                "priceCurrency": "INR",
-                "price": "2000",
-                "availability": "https://schema.org/InStock",
-                "url": "https://artbrush.co/affordable.html#art-02"
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Product",
-                  "name": "Ember Bloom",
-                  "image": "https://artbrush.co/assets/images/affordable-art/IMG_20260102_162508.jpg",
-                  "description": "A burst of warm pigments and floral energy, celebrating resilience and renewal with every layered petal.",
-                  "brand": {
-                    "@id": "https://artbrush.co/#organization"
-                  }
-                },
-                "priceCurrency": "INR",
-                "price": "2000",
-                "availability": "https://schema.org/InStock",
-                "url": "https://artbrush.co/affordable.html#art-03"
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Product",
-                  "name": "Monsoon Silence",
-                  "image": "https://artbrush.co/assets/images/affordable-art/IMG_20260102_162531.jpg",
-                  "description": "Deep greens and muted golds create a serene atmosphere, inspired by rain and the stillness that follows.",
-                  "brand": {
-                    "@id": "https://artbrush.co/#organization"
-                  }
-                },
-                "priceCurrency": "INR",
-                "price": "2000",
-                "availability": "https://schema.org/InStock",
-                "url": "https://artbrush.co/affordable.html#art-04"
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Product",
-                  "name": "Earthen Glow",
-                  "image": "https://artbrush.co/assets/images/affordable-art/IMG_20260102_162557.jpg",
-                  "description": "Textured strokes in terracotta and sand tones bring a warm, grounded presence to intimate spaces.",
-                  "brand": {
-                    "@id": "https://artbrush.co/#organization"
-                  }
-                },
-                "priceCurrency": "INR",
-                "price": "2000",
-                "availability": "https://schema.org/InStock",
-                "url": "https://artbrush.co/affordable.html#art-05"
-              }
-            ]
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Soft River Memory",
+              "image": "https://artbrush.co/assets/images/affordable-art/IMG_20260102_162433.jpg",
+              "description": "Fluid brushwork and gentle contrasts create a meditative rhythm—like water moving through a quiet landscape."
+            },
+            "priceCurrency": "INR",
+            "price": "2000",
+            "availability": "https://schema.org/InStock",
+            "url": "https://artbrush.co/affordable.html#art-02"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Ember Bloom",
+              "image": "https://artbrush.co/assets/images/affordable-art/IMG_20260102_162508.jpg",
+              "description": "A burst of warm pigments and floral energy, celebrating resilience and renewal with every layered petal."
+            },
+            "priceCurrency": "INR",
+            "price": "2000",
+            "availability": "https://schema.org/InStock",
+            "url": "https://artbrush.co/affordable.html#art-03"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Monsoon Silence",
+              "image": "https://artbrush.co/assets/images/affordable-art/IMG_20260102_162531.jpg",
+              "description": "Deep greens and muted golds create a serene atmosphere, inspired by rain and the stillness that follows."
+            },
+            "priceCurrency": "INR",
+            "price": "2000",
+            "availability": "https://schema.org/InStock",
+            "url": "https://artbrush.co/affordable.html#art-04"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Earthen Glow",
+              "image": "https://artbrush.co/assets/images/affordable-art/IMG_20260102_162557.jpg",
+              "description": "Textured strokes in terracotta and sand tones bring a warm, grounded presence to intimate spaces."
+            },
+            "priceCurrency": "INR",
+            "price": "2000",
+            "availability": "https://schema.org/InStock",
+            "url": "https://artbrush.co/affordable.html#art-05"
           }
         ]
       }
