@@ -87,12 +87,54 @@
             "@type": "Person",
             "@id": "https://MysticArtStudio.com/#artist",
             "name": "Yamuna Padmanaban",
+            "jobTitle": ["Artist", "Art Therapist", "Brand Consultant"],
+            "description": "Yamuna Padmanaban is the artist behind MysticArtStudio, known for soulful visual narratives, commissioned artwork, and art-led brand storytelling.",
+            "image": "https://MysticArtStudio.com/assets/images/about/Self Portrait_edited_edited_edited.avif",
+            "knowsAbout": ["Art", "Brand Storytelling", "Art Therapy", "Visual Design"],
+            "award": "EXCELLENCE AWARD from International Kalaratnam Awards India - 2021",
             "worksFor": {
               "@id": "https://MysticArtStudio.com/#organization"
             },
             "sameAs": [
+              "https://www.facebook.com/media/set/?vanity=Yamunaa.Laksh&set=a.10210794901570833",
               "https://www.linkedin.com/in/yamuna-padmanaban/",
               "https://www.instagram.com/mystic.art_yams/"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://MysticArtStudio.com/#website",
+            "name": "MysticArtStudio",
+            "url": "https://MysticArtStudio.com/",
+            "publisher": {
+              "@id": "https://MysticArtStudio.com/#organization"
+            }
+          },
+          {
+            "@type": "ImageObject",
+            "@id": "https://MysticArtStudio.com/about.html#portrait",
+            "contentUrl": "https://MysticArtStudio.com/assets/images/about/Self Portrait_edited_edited_edited.avif",
+            "description": "Portrait of Yamuna Padmanaban, artist and founder of MysticArtStudio",
+            "creator": {
+              "@id": "https://MysticArtStudio.com/#artist"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://MysticArtStudio.com/about.html#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://MysticArtStudio.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "About",
+                "item": "https://MysticArtStudio.com/about.html"
+              }
             ]
           },
           {
@@ -112,9 +154,14 @@
             "isPartOf": {
               "@id": "https://MysticArtStudio.com/#website"
             },
-            "mainEntity": {
-              "@id": "https://MysticArtStudio.com/#organization"
-            }
+            "mainEntity": [
+              {
+                "@id": "https://MysticArtStudio.com/#organization"
+              },
+              {
+                "@id": "https://MysticArtStudio.com/#artist"
+              }
+            ]
           }
         ]
       }
