@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://MysticArtStudio.com/sitemap.xml
+Sitemap: https://artbrush.co/sitemap.xml
