@@ -114,3 +114,37 @@ if (lightbox && lightboxImage) {
     }
   });
 }
+
+const mobileToggle = document.querySelector("[data-mobile-toggle]");
+const mobileMenu = document.querySelector("[data-mobile-menu]");
+
+if (mobileToggle && mobileMenu) {
+  const closeMenu = () => {
+    mobileMenu.classList.add("hidden");
+    mobileToggle.setAttribute("aria-expanded", "false");
+  };
+
+  mobileToggle.addEventListener("click", () => {
+    const isOpen = !mobileMenu.classList.contains("hidden");
+    if (isOpen) {
+      closeMenu();
+    } else {
+      mobileMenu.classList.remove("hidden");
+      mobileToggle.setAttribute("aria-expanded", "true");
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (
+      !mobileMenu.classList.contains("hidden") &&
+      !mobileMenu.contains(event.target) &&
+      !mobileToggle.contains(event.target)
+    ) {
+      closeMenu();
+    }
+  });
+
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+}
