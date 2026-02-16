@@ -30,6 +30,11 @@ h5 {
   letter-spacing: 0.01em;
 }
 
+/* Match heading font for taglines and display text */
+.font-display {
+  font-family: "Playfair Display", "Times New Roman", serif;
+}
+
 .nav-link {
   position: relative;
   padding-bottom: 2px;
