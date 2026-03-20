@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AEO/GEO Change Report - MysticArtStudio</title>
+    <style>
+      :root {
+        --bg: #f6f3ee;
+        --card: #ffffff;
+        --text: #1f1f1f;
+        --muted: #666;
+        --accent: #7a5b43;
+        --border: #e8e1d8;
+        --good: #1f7a3d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.55;
+      }
+
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      .hero {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 24px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0 0 10px;
+        line-height: 1.25;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        margin-top: 26px;
+        font-size: 22px;
+      }
+
+      h3 {
+        margin-top: 18px;
+        font-size: 18px;
+      }
+
+      p {
+        margin: 8px 0;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .kpi {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: #eef8f1;
+        border: 1px solid #cde8d5;
+        color: var(--good);
+        font-weight: 600;
+      }
+
+      .section {
+        margin-top: 18px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 22px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .tile {
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 14px;
+        background: #fffdfb;
+      }
+
+      ul {
+        margin: 8px 0 8px 18px;
+        padding: 0;
+      }
+
+      code {
+        background: #f3eee8;
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        border: 1px solid var(--border);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        background: #faf6f1;
+      }
+
+      .note {
+        margin-top: 14px;
+        padding: 12px;
+        border-left: 3px solid var(--accent);
+        background: #fcf8f4;
+        color: #5a4c3f;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <h1>AEO/GEO Change Report</h1>
+        <p class="muted">
+          Project: MysticArtStudio (Artbrush domain)
+          <br />
+          Focus: AI citation readiness and answer extraction quality
+        </p>
+        <p>
+          This report summarizes the major AEO/GEO improvements implemented across the
+          website, with clear examples of what changed and why each change improves
+          scoring.
+        </p>
+        <span class="kpi">Estimated AEO/GEO uplift: ~35–39% to ~58–68%</span>
+      </section>
+
+      <section class="section">
+        <h2>1) Structured Data Refactor (High Impact)</h2>
+        <p><strong>Change made:</strong> JSON-LD was flattened and made page-specific.</p>
+        <ul>
+          <li>Removed graph indirection patterns and made schema explicit.</li>
+          <li>Applied one dominant type per page.</li>
+          <li>Added inlined <code>author</code>, <code>publisher</code>, and page-level context.</li>
+        </ul>
+        <div class="grid">
+          <div class="tile">
+            <h3>Example</h3>
+            <p>
+              <code>index.html</code> now uses <code>WebPage</code> with
+              <code>mainEntityOfPage</code>, <code>mainEntity</code>, <code>author</code>,
+              and <code>publisher</code>.
+            </p>
+          </div>
+          <div class="tile">
+            <h3>Why it matters</h3>
+            <p>
+              AEO tools and LLM pipelines parse explicit top-level entities more reliably than
+              nested or indirect schema.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>2) Schema Type Coverage Across All Core Pages</h2>
+        <p><strong>Change made:</strong> Each page now maps to an appropriate schema type.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Page</th>
+              <th>Schema Type</th>
+              <th>AEO Benefit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>/</code></td>
+              <td><code>WebPage</code></td>
+              <td>Clear site-level entity for summary answers</td>
+            </tr>
+            <tr>
+              <td><code>/brand.html</code></td>
+              <td><code>Service</code></td>
+              <td>Improves service-intent query matching</td>
+            </tr>
+            <tr>
+              <td><code>/merchandise.html</code></td>
+              <td><code>CollectionPage</code> + Products</td>
+              <td>Better extraction for product and offer answers</td>
+            </tr>
+            <tr>
+              <td><code>/affordable.html</code></td>
+              <td><code>OfferCatalog</code></td>
+              <td>Improves catalog and price-related extraction</td>
+            </tr>
+            <tr>
+              <td><code>/about.html</code></td>
+              <td><code>ProfilePage</code></td>
+              <td>Strengthens author/entity credibility signals</td>
+            </tr>
+            <tr>
+              <td><code>/blog.html</code></td>
+              <td><code>Blog</code> + BlogPosting entries</td>
+              <td>Improves content-source eligibility for citations</td>
+            </tr>
+            <tr>
+              <td><code>/faq.html</code></td>
+              <td><code>FAQPage</code></td>
+              <td>Direct Q&A extraction support</td>
+            </tr>
+            <tr>
+              <td><code>/contact.html</code></td>
+              <td><code>ContactPage</code></td>
+              <td>Improves contact-intent answer quality</td>
+            </tr>
+            <tr>
+              <td><code>/art-therapy-practice.html</code></td>
+              <td><code>HowTo</code></td>
+              <td>Step-based answer extraction support</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>3) Canonical and Domain Normalization (High Impact)</h2>
+        <p>
+          <strong>Change made:</strong> All canonical and schema URLs were standardized to
+          <code>https://artbrush.co</code>.
+        </p>
+        <div class="grid">
+          <div class="tile">
+            <h3>Example</h3>
+            <p>
+              Canonical tags now consistently point to the live domain
+              (for example <code>https://artbrush.co/brand.html</code>).
+            </p>
+          </div>
+          <div class="tile">
+            <h3>Why it matters</h3>
+            <p>
+              Reduces source ambiguity and improves confidence when AI systems select a
+              canonical citation target.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>4) Freshness Signals and Date Completeness (High Impact)</h2>
+        <p><strong>Change made:</strong> Added and normalized publication/modification signals.</p>
+        <ul>
+          <li><code>article:published_time</code> and <code>article:modified_time</code></li>
+          <li><code>meta name="date"</code> and <code>meta name="last-modified"</code></li>
+          <li>Schema <code>datePublished</code> and <code>dateModified</code></li>
+          <li>Sitemap <code>&lt;lastmod&gt;</code> for every URL</li>
+        </ul>
+        <p>
+          <strong>Why it matters:</strong> AEO scorers use temporal signals to evaluate
+          answer relevance and freshness.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>5) Automated Freshness Pipeline (Sitemap lastmod)</h2>
+        <p>
+          <strong>Change made:</strong> Built an automated process so freshness does not rely on
+          manual updates.
+        </p>
+        <ul>
+          <li>
+            <code>scripts/update-sitemap.js</code> computes <code>lastmod</code> from git history.
+          </li>
+          <li>
+            <code>.github/workflows/update-sitemap.yml</code> runs on push to main and commits
+            sitemap changes.
+          </li>
+        </ul>
+        <p><strong>Why it matters:</strong> Prevents stale dates, a common AEO audit failure.</p>
+      </section>
+
+      <section class="section">
+        <h2>6) Reader-Friendly Extractability Enhancements</h2>
+        <p>
+          <strong>Change made:</strong> Added concise Q&A blocks on key pages, later relabeled to
+          <code>Common Questions</code> to keep UX natural.
+        </p>
+        <div class="grid">
+          <div class="tile">
+            <h3>Example</h3>
+            <p>
+              Q&A appears in plain page content and is paired with <code>FAQPage</code> schema.
+            </p>
+          </div>
+          <div class="tile">
+            <h3>Why it matters</h3>
+            <p>
+              Improves extraction into direct answer snippets while staying readable for
+              humans.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>7) Technical Delivery Improvements Supporting AEO</h2>
+        <ul>
+          <li><code>defer</code> on local script loading.</li>
+          <li><code>loading="lazy"</code> and <code>decoding="async"</code> on images.</li>
+          <li>Above-the-fold image uses <code>loading="eager"</code> + <code>fetchpriority="high"</code>.</li>
+        </ul>
+        <p>
+          <strong>Why it matters:</strong> Better render stability and faster content visibility
+          improve crawl reliability and answer extraction quality.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Scoring Dimension Mapping</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Scoring Dimension</th>
+              <th>What was implemented</th>
+              <th>Expected impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Machine Readability</td>
+              <td>Flattened JSON-LD, explicit entities, page-specific schema</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <td>Entity Confidence</td>
+              <td>Inlined Person/Organization + profile/service mapping</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <td>Freshness</td>
+              <td>Meta dates + schema dates + automated sitemap lastmod</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <td>Citation Eligibility</td>
+              <td>FAQ schema + structured Q&A + canonical consistency</td>
+              <td>Medium-High</td>
+            </tr>
+            <tr>
+              <td>Trust Consistency</td>
+              <td>Domain and URL normalization to artbrush.co</td>
+              <td>Medium-High</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Conclusion</h2>
+        <p>
+          The website moved from basic SEO metadata to a strong AEO/GEO foundation built on
+          explicit schema, freshness automation, and citation-friendly structure. The most
+          important gains come from schema clarity, date completeness, and canonical
+          consistency.
+        </p>
+        <div class="note">
+          This report focuses on changes actually implemented in the repository and their
+          direct scoring implications.
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
